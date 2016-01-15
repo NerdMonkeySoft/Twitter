@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yet another simple Twitter feed">
+    <meta name="author" content="Sandra Topczewska">
+
+    <title>Simple Twitter Feed</title>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link media="all" type="text/css" rel="stylesheet" href="public/css/frontend.css">
+    <link media="all" type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,700,100italic,300italic,700italic&amp;subset=latin,latin-ext">
+</head>
+
+<body>
+
+<div class="container" id="searchScope">
+
+    <header>
+        <h1 class="blue">Simple Twitter Feed</h1>
+        <div id="search">
+            <input type="text" id="filterCollection" placeholder="What are You looking for?">
+        </div>
+    </header>
+
+    <span class="updateNotification blue">Just a second, loading awesomeness.</span>
+
+    <ul class="timeline" id="tweeter-timeline"></ul>
+
+</div>
+
+<!-- Libraries -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+
+<script src="public/js/twitter/model.js"></script>
+<script src="public/js/twitter/collection.js"></script>
+<script src="public/js/twitter/tweets.js"></script>
+
+<!-- Backbone templates -->
+<script type="text/template" id="SingleTweetView">
+    <div class="tweet">
+        <div class="content">
+            <img src="<%- profile_image %>" alt="">
+
+            <span class="author">
+                <label>@<%- screen_name %></label>
+                <br/>
+                <a href="" class="blue"><%- username %></a>
+            </span>
+
+            <span class="text"><%- tweet_content %></span>
+
+            <br/>
+
+            <span class="retweeted blue">
+                I was retweeted <%- retweeted %> times
+            </span>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" id="NothingFound">
+    <div class="feed_item">
+        Sorry, no tweets found.
+    </div>
+</script>
+
+</body>
+</html>
+
+
+

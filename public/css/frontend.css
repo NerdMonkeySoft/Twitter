@@ -1,0 +1,292 @@
+/* -----------------------------
+
+Scaffolding
+
+----------------------------- */
+body
+{
+    background:  #e9f0f5 linear-gradient(to right, #e9f0f5 0%, #f1f5f8 41%, #f1f5f8 57%, #e9f0f5 100%);
+    font-family: Lato, Helvetica, sans-serif;
+    font-size:   1em;
+    font-weight: 300;
+    color:       #fff;
+}
+
+.container
+{
+    margin: auto;
+}
+
+@media (min-width: 34em)
+{
+    .container
+    {
+        width: 512px;
+    }
+}
+
+@media (min-width: 48em)
+{
+    .container
+    {
+        width: 750px;
+    }
+}
+
+@media (min-width: 62em)
+{
+    .container
+    {
+        width: 970px;
+    }
+}
+
+@media (min-width: 75em)
+{
+    .container
+    {
+        width: 1170px;
+    }
+}
+
+h1
+{
+    font-size:   2em;
+    line-height: 3em;
+    font-weight: 300;
+}
+
+header
+{
+    margin-bottom: 100px;
+}
+
+/* -----------------------------
+
+Utilities
+
+----------------------------- */
+.blue
+{
+    color: #17aaee;
+}
+
+/* -----------------------------
+
+Search
+
+----------------------------- */
+#search > #filterCollection
+{
+    line-height: 2em;
+    font-size:   1.5em;
+    outline:     none !important;
+    width:       100%;
+    color:       #17aaee;
+    font-weight: 100;
+    padding:     10px;
+    border:      1px solid #c9dcea;
+}
+
+#search > #filterCollection::-webkit-input-placeholder
+{
+    color: #66a5d2;
+}
+
+#search > #filterCollection:-moz-placeholder
+{
+    color: #66a5d2;
+}
+
+#search > #filterCollection::-moz-placeholder
+{
+    color: #66a5d2;
+}
+
+#search > #filterCollection::-moz-placeholder
+{
+    color: #66a5d2;
+}
+
+#search > #filterCollection:-ms-input-placeholder
+{
+    color: #66a5d2;
+}
+
+/* -----------------------------
+
+Timeline
+
+----------------------------- */
+.updateNotification
+{
+    margin-bottom: 20px;
+}
+
+.timeline
+{
+    list-style: none;
+    position:   relative;
+    margin:     0px;
+    padding:    0px;
+    color:      #66a5d2;
+}
+
+@media (min-width: 48em)
+{
+    .timeline:before
+    {
+        top:              0;
+        bottom:           0;
+        position:         absolute;
+        content:          " ";
+        width:            2px;
+        background-color: #c9dcea;
+        margin-left:      -1px;
+        left:             50%;
+    }
+}
+
+.timeline > li
+{
+    display:       inline-block;
+    width:         100%;
+    margin-bottom: 20px;
+}
+
+.timeline > li > .tweet
+{
+    background:         #fff;
+    -webkit-box-shadow: 0 1px 6px #c9dcea;
+    box-shadow:         0 1px 6px #c9dcea;
+    border-radius:      6px;
+    position:           relative;
+}
+
+@media (min-width: 48em)
+{
+    .timeline > li > .tweet
+    {
+        width: 21em;
+    }
+
+    .timeline > li:nth-child(even) > .tweet
+    {
+        float: right;
+    }
+}
+
+@media (min-width: 62em)
+{
+    .timeline > li > .tweet
+    {
+        width: 29em;
+    }
+}
+
+@media (min-width: 75em)
+{
+    .timeline > li > .tweet
+    {
+        width: 34.5em;
+    }
+}
+
+@media (min-width: 48em)
+{
+    .timeline > li > .tweet:before
+    {
+        position:      absolute;
+        top:           16px;
+        right:         -6px;
+        border-top:    6px solid transparent;
+        border-left:   6px solid #fff;
+        border-right:  0 solid #fff;
+        border-bottom: 6px solid transparent;
+        content:       " ";
+    }
+
+    .timeline > li:nth-child(even) > .tweet:before
+    {
+        border-left-width:  0;
+        border-right-width: 6px;
+        left:               -6px;
+        right:              auto;
+    }
+}
+
+.timeline > li > .tweet > .content
+{
+    padding:      15px;
+    padding-left: 76px;
+    display:      inline-block;
+    min-height:   60px;
+}
+
+.timeline > li > .tweet > .content > img
+{
+    width:    60px;
+    height:   60px;
+    position: absolute;
+    top:      6px;
+    left:     6px;
+}
+
+.timeline > li > .tweet > .content > .author
+{
+    display:       inline-block;
+    width:         100%;
+    margin-bottom: 10px;
+}
+
+.timeline > li > .tweet > .content > .author a
+{
+    text-decoration: none;
+    font-weight:     300;
+}
+
+.timeline > li > .tweet > .content > .author label
+{
+    font-size: 0.8em;
+}
+
+.timeline > li > .tweet > .content > .author a:hover
+{
+    text-decoration: underline;
+}
+
+.timeline > li > .tweet > .content > .text
+{
+    display:        inline-block;
+    padding-bottom: 10px;
+    border-bottom:  1px solid #c9dcea;
+    margin-bottom:  10px;
+    line-height:    1.3em;
+    font-size:      0.9em;
+}
+
+@media (min-width: 62em)
+{
+    .timeline > li > .tweet > .content > .text
+    {
+        font-size: 1em;
+    }
+}
+
+.timeline > li > .tweet > .content > .text > a
+{
+    color:           #17aaee;
+    text-decoration: none;
+    font-weight:     300;
+}
+
+.timeline > li > .tweet > .content > .text > a
+{
+    text-decoration: underline;
+}
+
+.timeline > li > .tweet > .content > .retweeted
+{
+    font-weight: 300;
+    font-size:   0.8em;
+}
